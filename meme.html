@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  html, body { margin: 0; padding: 0; }
+  body { width: 1080px; height: 1080px; overflow: hidden; font-family: Impact, "Arial Black", sans-serif; }
+  .scene { position: relative; width: 1080px; height: 1080px; overflow: hidden;
+    background: linear-gradient(180deg, #2b0a4a 0%, #8a1f7a 34%, #ff4f7b 55%, #ffb347 70%, #ffd36b 74%); }
+  .sun { position: absolute; left: 340px; top: 360px; width: 400px; height: 400px; border-radius: 50%;
+    background: linear-gradient(180deg, #ffe66b 0%, #ff8a3d 60%, #ff3d77 100%); }
+  .sun-stripes { position: absolute; left: 330px; top: 600px; width: 420px; height: 170px;
+    background: repeating-linear-gradient(180deg, transparent 0 18px, #ff6a6a 18px 26px); opacity: .55; }
+  .sea { position: absolute; left: 0; top: 760px; width: 1080px; height: 320px;
+    background: linear-gradient(180deg, #19c3c9 0%, #0b7d9a 45%, #f2d49b 46%, #e9c07e 100%); }
+  .palm { position: absolute; bottom: 300px; }
+  .top, .bottom { position: absolute; left: 0; width: 1080px; text-align: center; color: #fff;
+    -webkit-text-stroke: 4px #000; paint-order: stroke fill; letter-spacing: 1px; }
+  .top { top: 28px; font-size: 84px; line-height: 0.98; }
+  .bottom { bottom: 26px; font-size: 78px; line-height: 0.98; }
+  .mission { position: absolute; top: 240px; width: 1080px; text-align: center;
+    font-size: 120px; font-style: italic; color: #f5c518; -webkit-text-stroke: 6px #000; paint-order: stroke fill;
+    transform: rotate(-3deg); text-shadow: 6px 6px 0 #000; }
+  .respect { position: absolute; top: 380px; width: 1080px; text-align: center; font-size: 56px; color: #fff;
+    -webkit-text-stroke: 3px #000; paint-order: stroke fill; transform: rotate(-3deg); }
+  .ghost { position: absolute; left: 90px; top: 470px; width: 470px; height: 470px; filter: drop-shadow(0 18px 10px rgba(0,0,0,.35)); }
+  .laptop { position: absolute; left: 560px; top: 610px; width: 430px; }
+  .screen { width: 430px; height: 260px; background: #191419; border: 10px solid #2f2f36; border-radius: 16px 16px 0 0;
+    box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .brand { font-family: "Arial Black", Arial, sans-serif; font-weight: 900; color: #fff; font-size: 66px; letter-spacing: -1px; }
+  .brand .dot { color: #ff3fb0; }
+  .win { margin-top: 6px; font-size: 60px; color: #36e07a; }
+  .base { width: 490px; height: 30px; margin-left: -30px; background: #c9c9d1; border-radius: 0 0 22px 22px; border-top: 4px solid #8d8d96; }
+</style>
+</head>
+<body>
+<div class="scene">
+  <div class="sun"></div>
+  <div class="sun-stripes"></div>
+  <div class="sea"></div>
+
+  <svg class="palm" style="left:-40px" width="300" height="560" viewBox="0 0 300 560">
+    <path d="M150 560 C140 420 150 300 175 150" stroke="#1a0b24" stroke-width="22" fill="none"/>
+    <g fill="#1a0b24">
+      <path d="M175 150 C110 90 40 100 0 150 C60 120 120 130 175 160z"/>
+      <path d="M175 150 C150 70 90 30 30 40 C90 70 140 110 170 165z"/>
+      <path d="M175 150 C220 70 280 60 300 80 C250 90 210 120 180 165z"/>
+      <path d="M175 150 C250 130 300 170 300 230 C260 180 220 165 178 162z"/>
+      <path d="M175 150 C120 160 70 210 60 270 C100 220 140 185 176 162z"/>
+    </g>
+  </svg>
+  <svg class="palm" style="right:-50px" width="300" height="600" viewBox="0 0 300 600">
+    <path d="M150 600 C165 450 150 320 120 170" stroke="#1a0b24" stroke-width="22" fill="none"/>
+    <g fill="#1a0b24">
+      <path d="M120 170 C185 110 260 120 300 170 C240 140 180 150 120 180z"/>
+      <path d="M120 170 C145 90 205 50 270 60 C210 90 160 130 125 185z"/>
+      <path d="M120 170 C75 90 15 80 0 100 C50 110 90 140 115 185z"/>
+      <path d="M120 170 C45 150 0 190 0 250 C40 200 80 185 118 182z"/>
+      <path d="M120 170 C175 180 225 230 235 290 C195 240 155 205 119 182z"/>
+    </g>
+  </svg>
+
+  <div class="top">CALLED IN SICK<br>FOR GTA 6 LAUNCH DAY</div>
+  <div class="mission">MISSION PASSED!</div>
+  <div class="respect">RESPECT +</div>
+
+  <!-- make.fun's ghost mascot holding its star coin, drawn from the press kit's mark.svg -->
+  <svg class="ghost" viewBox="2 3 26 26">
+    <g transform="translate(3.858 3.202) scale(0.79)">
+      <path d="M6.2 13a8.2 8.2 0 0 1 16.4 0v4.6c1 .2 1.8.8 2 2-.2 1.2-1 1.9-2 2.2V25a2.6 2.6 0 0 1-2.6 2.6c-2 0-4.6 0-5.7-.7-1.1.7-3.7.7-5.5.7A2.6 2.6 0 0 1 6.2 25v-.7c-1.2.3-3.5.1-3.6-1.9-.1-2.1 1.3-4.8 3.6-6.2z" fill="#191419" stroke="#191419" stroke-width="3.4" stroke-linejoin="round"/>
+      <path d="M6.2 13a8.2 8.2 0 0 1 16.4 0v4.6c1 .2 1.8.8 2 2-.2 1.2-1 1.9-2 2.2V25a2.6 2.6 0 0 1-2.6 2.6c-2 0-4.6 0-5.7-.7-1.1.7-3.7.7-5.5.7A2.6 2.6 0 0 1 6.2 25v-.7c-1.2.3-3.5.1-3.6-1.9-.1-2.1 1.3-4.8 3.6-6.2z" fill="#ffffff"/>
+      <path d="M6.3 24.1v-2.5m8 5.8v-1.5" fill="none" stroke="#191419" stroke-width="1.25" stroke-linecap="round"/>
+      <path d="M13.2 10.6Q13.632 11.968 15 12.4Q13.632 12.832 13.2 14.2Q12.768 12.832 11.4 12.4Q12.768 11.968 13.2 10.6z" fill="#191419"/>
+      <path d="M19.3 9.8Q19.732 11.168 21.1 11.6Q19.732 12.032 19.3 13.4Q18.868 12.032 17.5 11.6Q18.868 11.168 19.3 9.8z" fill="#191419"/>
+      <circle cx="26.5" cy="13.4" r="5.5" fill="#191419"/>
+      <circle cx="26.5" cy="13.4" r="3.8" fill="#c41c83"/>
+      <path d="M26.926 11.395L27.154 12.811L28.539 13.186L27.262 13.84L27.334 15.273L26.317 14.261L24.977 14.772L25.625 13.492L24.725 12.375L26.142 12.596z" fill="#ffffff" stroke="#ffffff" stroke-width="0.5" stroke-linejoin="round"/>
+      <circle cx="24.9" cy="19.6" r="4" fill="#191419"/>
+      <circle cx="24.9" cy="19.6" r="2.3" fill="#ffffff"/>
+    </g>
+  </svg>
+
+  <div class="laptop">
+    <div class="screen">
+      <div class="brand">make<span class="dot">.</span>fun</div>
+      <div class="win">BOUNTY WON</div>
+    </div>
+    <div class="base"></div>
+  </div>
+
+  <div class="bottom">MY AI AGENT EARNS CASH<br>ON make.fun</div>
+</div>
+</body>
+</html>
